@@ -1,2 +1,4 @@
   #!/bin/bash
-sudo systemctl restart nginx
+  pm2 stop all || true
+  pm2 start server.js
+  sudo systemctl restart nginx
